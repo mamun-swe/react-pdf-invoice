@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import PdfDocument from "./components/pdf/pdf-document";
+import { PDFViewer } from "@react-pdf/renderer";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <PDFViewer width="100%" height="990" className="App">
+        <PdfDocument />
+      </PDFViewer>
+    </Fragment>
   );
-}
+};
 
 export default App;
