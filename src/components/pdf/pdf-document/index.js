@@ -5,9 +5,8 @@ import { TableHeader } from "../table/header";
 import RobotoRegular from "../fonts/Roboto-Regular.ttf";
 import RobotoBold from "../fonts/Roboto-Bold.ttf";
 import { TableRow } from "../table/row";
-import data from "../../../data.json";
 
-const Quixote = () => (
+const Quixote = (props) => (
   <Document>
     <Page style={styles.body} size={"LETTER"}>
       <PdfHeader />
@@ -17,7 +16,7 @@ const Quixote = () => (
       <Text style={styles.title}>Dummy text dsfsdf</Text>
 
       <TableHeader></TableHeader>
-      <TableRow items={data} />
+      <TableRow items={props.data} />
 
       <PdfFooter />
     </Page>
