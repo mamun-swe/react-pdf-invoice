@@ -1,17 +1,18 @@
 import React from "react";
 import { Text, View, StyleSheet } from "@react-pdf/renderer";
 
-const borderColor = "#707070";
+const borderColor = "#666";
 const borderWidth = 1;
-const padding = "3px";
+const padding = "6px 2px";
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     borderColor: borderColor,
-    backgroundColor: "#EDEDED",
+    backgroundColor: "#ddd",
     borderWidth: borderWidth,
     fontSize: 9,
+    color: "#000",
     fontWeight: "bold",
   },
   artical: {
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const TableHeader = () => (
+export const TableHead = () => (
   <View style={styles.container}>
     <Text style={[styles.artical, styles.artical]}>Article#</Text>
     <Text style={styles.product_id}>Prod ID</Text>
