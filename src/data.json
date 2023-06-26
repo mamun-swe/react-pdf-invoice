@@ -394,49 +394,5 @@
         "quantity": 6562,
         "price": 0.9800,
         "us_dollar": 6430.7600
-    },
-    {
-        "article": "D 8568_BS",
-        "product_id": 37,
-        "composition": "Non Woven Dot Fusible Interlining",
-        "color": "White",
-        "width": "39/40",
-        "weight": 442,
-        "quantity": 4374,
-        "price": 0.9800,
-        "us_dollar": 4286.5200
-    },
-    {
-        "article": "2016 SF RCS",
-        "product_id": 38,
-        "composition": "Non-woven Fusible Recycled Interlining",
-        "color": "Charcoal",
-        "width": "39/40",
-        "weight": 663,
-        "quantity": 6562,
-        "price": 0.9800,
-        "us_dollar": 6430.7600
-    },
-    {
-        "article": "D 8568_BS",
-        "product_id": 39,
-        "composition": "Non Woven Dot Fusible Interlining",
-        "color": "White",
-        "width": "39/40",
-        "weight": 442,
-        "quantity": 4374,
-        "price": 0.9800,
-        "us_dollar": 4286.5200
-    },
-    {
-        "article": "2016 SF RCS",
-        "product_id": 40,
-        "composition": "Non-woven Fusible Recycled Interlining",
-        "color": "Charcoal",
-        "width": "39/40",
-        "weight": 663,
-        "quantity": 6562,
-        "price": 0.9800,
-        "us_dollar": 6430.7600
     }
 ]

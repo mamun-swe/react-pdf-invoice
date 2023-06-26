@@ -13,6 +13,8 @@ import { PdfHeader } from "../components/header";
 import { PdfFooter } from "../components/footer";
 import { TableHead } from "../components/table-head";
 import { TableRow } from "../components/table-row";
+import { TableFooter } from "../components/table-footer";
+import { Signature } from "../components/signature";
 
 export const PiInvoice = ({ data }) => {
   // Calculate the total number of pages required
@@ -29,7 +31,7 @@ export const PiInvoice = ({ data }) => {
       flexDirection: "row",
       flexWrap: "wrap",
       backgroundColor: "#FFFFFF",
-      padding: 10,
+      padding: 25,
       fontFamily: "Roboto",
     },
     item: {
@@ -57,25 +59,25 @@ export const PiInvoice = ({ data }) => {
             <TableRow item={element} key={`table-row-${index}`} />
           ))}
 
-          {i + 1 === totalPages ? (
-            <View>
-              <Text>Signature & Product sum</Text>
+          {i + 1 < totalPages ? (
+            <View fixed style={{ marginTop: 10 }}>
+              <Text style={{ fontSize: 10, fontWeight: "bold" }}>
+                Terms & Condition:
+              </Text>
             </View>
           ) : null}
 
-          <View fixed>
-            <Text style={{ fontSize: 12 }}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only 9ve centuries, but also the leap into electronic
-              typesetting, remaining essentially unchanged. It was popularised
-              in the 16-0s with the release of Letraset sheets containing Lorem
-              Ipsum passages, and more recentD ly with desktop publishing
-              software like Aldus PageMaker including versions of Lorem Ipsum.
-            </Text>
-          </View>
+          {i + 1 === totalPages ? (
+            <>
+              <TableFooter />
+              <View fixed style={{ marginTop: 10 }}>
+                <Text style={{ fontSize: 10, fontWeight: "bold" }}>
+                  Terms & Condition:
+                </Text>
+              </View>
+              <Signature />
+            </>
+          ) : null}
 
           <PdfFooter />
         </Page>
